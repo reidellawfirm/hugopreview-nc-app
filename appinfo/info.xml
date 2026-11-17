@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>hugopreview_nc_app</id>
+    <name>Hugo Preview</name>
+    <summary>Build and preview Hugo static sites from Nextcloud folders</summary>
+    <description><![CDATA[Hugo Preview builds Hugo static sites from folders in Nextcloud Files and displays the generated site without leaving Nextcloud.
+
+Features:
+- Select one or more Hugo project folders from Nextcloud Files
+- Build and preview sites through the Nextcloud interface
+- Live rebuilds while editing Markdown in Nextcloud Text
+- Attachment, callout, task-list, and relative-link handling
+- Independent per-user project configuration
+
+Requirements:
+- The Hugo executable must be installed and available to the Nextcloud PHP process
+    ]]></description>
+    <version>1.0.0</version>
+    <licence>GPL-3.0-or-later</licence>
+    <author mail="schuyler@reidellawfirm.com">Schuyler "Rocky" Reidel, Reidel Law Firm</author>
+    <namespace>HugoPreview</namespace>
+    <category>files</category>
+    <category>tools</category>
+    <website>https://github.com/reidellawfirm/hugopreview-nc-app</website>
+    <bugs>https://github.com/reidellawfirm/hugopreview-nc-app/issues</bugs>
+    <repository type="git">https://github.com/reidellawfirm/hugopreview-nc-app</repository>
+    <dependencies>
+        <nextcloud min-version="34" max-version="35"/>
+        <php min-version="8.1"/>
+    </dependencies>
+    <navigations>
+        <navigation>
+            <name>Hugo Preview</name>
+            <route>hugopreview_nc_app.page.index</route>
+            <order>100</order>
+        </navigation>
+    </navigations>
+</info>

@@ -1,0 +1,14 @@
+{
+    "name": "reidel/hugopreview_nc_app",
+    "description": "Hugo Preview - build and preview Hugo sites from Nextcloud Files",
+    "type": "project",
+    "license": "GPL-3.0-or-later",
+    "require": {
+        "php": ">=8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "OCA\\HugoPreview\\": "lib/"
+        }
+    }
+}

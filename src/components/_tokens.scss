@@ -1,0 +1,71 @@
+// ──────────────────────────────────────────────────────────────────────
+// Reidel CRM design tokens
+// Layered on top of Nextcloud CSS variables; falls back gracefully when
+// running outside Nextcloud or in older versions.
+// ──────────────────────────────────────────────────────────────────────
+
+// Spacing scale (8pt grid)
+$rd-space-1: 4px;
+$rd-space-2: 8px;
+$rd-space-3: 12px;
+$rd-space-4: 16px;
+$rd-space-5: 20px;
+$rd-space-6: 24px;
+$rd-space-8: 32px;
+
+// Radii
+$rd-radius-sm: 6px;
+$rd-radius-md: 8px;
+$rd-radius-lg: 12px;
+
+// Shadows (soft, layered)
+$rd-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.06);
+$rd-shadow-md: 0 2px 6px rgba(0, 0, 0, 0.05), 0 4px 12px rgba(0, 0, 0, 0.06);
+
+// Typography
+$rd-font-xs: 12px;
+$rd-font-sm: 13px;
+$rd-font-md: 14px;
+$rd-font-lg: 16px;
+$rd-font-xl: 20px;
+$rd-font-2xl: 24px;
+
+// Semantic colour tokens (use NC vars when available, but with native dark mode CSS variable fallbacks)
+:root {
+	--rd-bg-page-light: #f5f7fa;
+	--rd-bg-card-light: #ffffff;
+	--rd-border-light: #e5e7eb;
+	--rd-border-soft-light: #ececec;
+	--rd-text-light-mode: #1f2937;
+	--rd-text-muted-light: #6b7280;
+	--rd-primary-light-mode: #0082c9;
+	--rd-primary-soft-light: #e6f3fb;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--rd-bg-page-light: #111827;
+		--rd-bg-card-light: #1f2937;
+		--rd-border-light: #374151;
+		--rd-border-soft-light: #4b5563;
+		--rd-text-light-mode: #f9fafb;
+		--rd-text-muted-light: #9ca3af;
+		--rd-primary-light-mode: #38bdf8;
+		--rd-primary-soft-light: #1e3a8a;
+	}
+}
+
+$rd-bg-page: var(--color-background-dark, var(--rd-bg-page-light));
+$rd-bg-card: var(--color-main-background, var(--rd-bg-card-light));
+$rd-border: var(--color-border, var(--rd-border-light));
+$rd-border-soft: var(--color-border-dark, var(--rd-border-soft-light));
+$rd-text: var(--color-main-text, var(--rd-text-light-mode));
+$rd-text-muted: var(--color-text-maxcontrast, var(--rd-text-muted-light));
+$rd-primary: var(--color-primary, var(--rd-primary-light-mode));
+$rd-primary-soft: var(--color-primary-light, var(--rd-primary-soft-light));
+
+// Status palette
+$rd-status-active: #10b981;
+$rd-status-prospect: #f59e0b;
+$rd-status-archived: #9ca3af;
+$rd-status-inactive: #ef4444;
